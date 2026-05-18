@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Support — HeadWell</title>
+    <meta name="description" content="Get help with HeadWell. Frequently asked questions and direct support contact.">
+    <meta name="theme-color" content="#2C7A7B">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="brand"><span class="brand-mark"></span>HeadWell</a>
+            <div class="nav-links">
+                <a href="support.html">Support</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+        </div>
+    </nav>
+
+    <article class="content container">
+        <h1>Support</h1>
+        <p>We're a small team and we read every message. The fastest way to reach us is email:</p>
+
+        <div class="support-actions">
+            <a href="mailto:support@headwell.app">Email support@headwell.app</a>
+            <a href="mailto:privacy@headwell.app">Privacy &amp; data requests</a>
+        </div>
+
+        <p>We acknowledge every email within 1 business day and respond substantively within 5 business days. For privacy requests (data export, account deletion), we respond within 30 days per GDPR / 45 days per CCPA.</p>
+
+        <h2>Frequently asked questions</h2>
+
+        <h3>Why does HeadWell need an account?</h3>
+        <p>Your health data is private. An account scopes everything to you and lets you restore your record on a new device. We support Sign in with Apple, Google, or email — your choice.</p>
+
+        <h3>Why does it need HealthKit access?</h3>
+        <p>HeadWell reads daily sleep, heart rate, HRV, and step count to spot patterns linked to your headaches. Raw Health samples never leave your device — we only store daily aggregates (one sleep number, one HRV number). You can use HeadWell fully without HealthKit; predictions are just sharper with it.</p>
+
+        <h3>Why location and barometer?</h3>
+        <p>Barometric pressure drops are one of the most reliable migraine triggers. Your iPhone's barometer reads local pressure to ±0.1 hPa — more accurate than any forecast. We use your location once per refresh to pair that reading with Apple WeatherKit data. Location is not stored.</p>
+
+        <h3>How accurate is the risk forecast?</h3>
+        <p>HeadWell's forecast is a personalized score derived from your own logged data and publicly available weather data. It is <strong>not</strong> a clinical prediction or diagnostic tool. Like any pattern-based system, it gets sharper as you log more entries. After about 30 days of consistent logging, most users see the daily score align meaningfully with how they actually feel.</p>
+
+        <h3>How do I export my data?</h3>
+        <p>Open the app → <strong>Profile → Data Export</strong>. You can export everything as CSV (for spreadsheets) or JSON (for backup). Files are generated on your device and shared via the iOS share sheet — they never touch our servers.</p>
+
+        <h3>How do I delete my account?</h3>
+        <p>Open the app → <strong>Profile → Account → Delete my account</strong>. This is irreversible and removes all your data from our backend within 30 days.</p>
+
+        <h3>How much does HeadWell cost?</h3>
+        <p>Free at v1.0. We may introduce optional paid features later; if so, you'll be notified before any charge and existing features won't be retroactively gated.</p>
+
+        <h3>Will my doctor accept the PDF report?</h3>
+        <p>The doctor PDF is designed for neurologists, headache specialists, and primary care providers. It includes a narrative summary, attack frequency, trigger patterns, medication effectiveness, MIDAS/HIT-6 scores, and HealthKit correlations — formatted for a clinical visit. Whether your specific clinician finds it useful depends on them, but the format is widely recognizable.</p>
+
+        <h3>Is HeadWell HIPAA-compliant?</h3>
+        <p>HeadWell is a consumer wellness app, not a Covered Entity under HIPAA. We follow HIPAA-style best practices (TLS in transit, AES-256 at rest, least-privilege access, audit logging) but we do not market the app as HIPAA-compliant. We are not a Business Associate to any healthcare provider.</p>
+
+        <h3>Does HeadWell work offline?</h3>
+        <p>Most logging and on-device features work offline. Risk forecasting needs internet for weather and barometer cross-checks. Your offline logs sync the next time the app comes online.</p>
+
+        <h3>I have a feature suggestion or bug to report</h3>
+        <p>Email <a href="mailto:support@headwell.app">support@headwell.app</a> with as much detail as you can. Screenshots help. We read every message.</p>
+
+        <hr>
+
+        <p><small>HeadWell is a consumer wellness app for self-tracking and education. It is not a substitute for professional medical advice, diagnosis, or treatment. If you are experiencing a sudden, severe, or entirely new type of headache, seek emergency medical attention.</small></p>
+    </article>
+
+    <footer class="footer">
+        <a href="support.html">Support</a> ·
+        <a href="privacy.html">Privacy</a> ·
+        <a href="terms.html">Terms</a>
+        <br><br>
+        © 2026 HeadWell. All rights reserved.
+    </footer>
+</body>
+</html>

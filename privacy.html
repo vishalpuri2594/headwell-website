@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Privacy Policy — HeadWell</title>
+    <meta name="description" content="HeadWell Privacy Policy — what we collect, why, how we protect it, and your rights.">
+    <meta name="theme-color" content="#2C7A7B">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="brand"><span class="brand-mark"></span>HeadWell</a>
+            <div class="nav-links">
+                <a href="support.html">Support</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+        </div>
+    </nav>
+
+    <article class="content container">
+        <h1>HeadWell — Privacy Policy</h1>
+        <p><strong>Effective date:</strong> May 17, 2026<br>
+        <strong>Last updated:</strong> May 17, 2026</p>
+
+        <p>This Privacy Policy explains what data HeadWell ("we", "us", or "HeadWell") collects when you use the HeadWell iOS app and related services, why we collect it, how we store and protect it, and the rights you have over it. We've written it in plain English. If anything is unclear, please email us.</p>
+
+        <blockquote>This policy is not legal advice and is a v1 publication. It will be reviewed by counsel and may be updated. Material changes will be communicated in-app.</blockquote>
+
+        <h2>1. Who we are</h2>
+        <p>HeadWell is a consumer wellness app for people living with chronic and episodic headache disorders, developed and operated by HeadWell (a sole-proprietor d/b/a of Vishal Puri). For privacy questions, data-subject requests, or to report a concern, please contact:</p>
+        <p><strong>Email:</strong> <a href="mailto:support@headwell.app">support@headwell.app</a></p>
+        <p>We act as the <strong>data controller</strong> for the personal data described in this policy.</p>
+
+        <h2>2. What we collect</h2>
+
+        <h3>2.1 Information you provide</h3>
+        <ul>
+            <li><strong>Account information</strong>: email address, password (stored hashed using BCrypt — we never see your plaintext password), display name.</li>
+            <li><strong>Authentication tokens</strong>: if you sign in with Apple or Google, we receive an identity token and (with your consent) your name. We do not see your Apple/Google password.</li>
+            <li><strong>Profile and patient details</strong>: optional information you enter — date of birth, address, phone, emergency contact, insurance number, primary care physician, neurologist contact.</li>
+            <li><strong>Intake survey responses</strong>: diagnoses, attack frequency, attack laterality, biological sex, gender identity, comorbidities, occupation, social habits, prior medications, prior imaging, prior surgeries.</li>
+            <li><strong>ACE-10 (Adverse Childhood Experiences) responses</strong>: optional. You may decline any item or skip the survey entirely.</li>
+            <li><strong>Clinical assessment results</strong>: MIDAS, HIT-6 scores.</li>
+            <li><strong>Headache and prodrome entries</strong>: pain level, duration, type, triggers, symptoms, pain locations and regions, pain quality descriptors, medications taken (with timing and effectiveness), aura type and duration, notes.</li>
+            <li><strong>Menstrual cycle entries</strong> (optional): period start and end dates, cycle length.</li>
+            <li><strong>Life event triggers</strong>: tags you record (stress, travel, etc.).</li>
+            <li><strong>Activity sessions</strong>: which breathing/stretching/massage protocols you complete and for how long.</li>
+            <li><strong>Notification preferences and settings</strong>.</li>
+        </ul>
+
+        <h3>2.2 Information from Apple HealthKit (with your permission)</h3>
+        <p>HeadWell can read the following Apple Health data types <strong>on your device only</strong>:</p>
+        <ul>
+            <li>Sleep analysis</li>
+            <li>Heart rate</li>
+            <li>Heart rate variability (HRV — SDNN)</li>
+            <li>Resting heart rate</li>
+            <li>Step count</li>
+            <li>Mindful minutes</li>
+        </ul>
+        <p>HeadWell can write the following Apple Health data:</p>
+        <ul>
+            <li>Headache events (so your other apps and your clinician can see them)</li>
+            <li>Mindful minutes (from completed breathing sessions)</li>
+        </ul>
+        <p><strong>Raw HealthKit samples never leave your device.</strong> Only daily aggregates (a single sleep-hours number, a daily HRV average, etc. — stored as <code>HealthMetricSnapshot</code>) are sent to our backend so your risk forecasts can be computed and synced across your devices.</p>
+
+        <h3>2.3 Location and device sensors</h3>
+        <ul>
+            <li><strong>Location (when in use)</strong>: used at the moment you open the app or refresh your risk forecast to fetch local barometric pressure, temperature, and humidity from Apple WeatherKit. Your location is <strong>not stored</strong> on our backend; only the resulting weather reading is associated with that day's risk score.</li>
+            <li><strong>Device barometer (motion permission)</strong>: used to read your iPhone's built-in atmospheric pressure sensor for hyper-local pressure measurements. No motion or fitness data is collected.</li>
+        </ul>
+
+        <h3>2.4 Information collected automatically</h3>
+        <ul>
+            <li><strong>Diagnostic data</strong>: HeadWell subscribes to Apple's MetricKit, which delivers (~once per day) anonymized crash, hang, CPU, and disk-write metrics. These are stored locally on your device and are not currently uploaded.</li>
+            <li><strong>Sync metadata</strong>: for each record synced to our backend, we keep a <code>remoteId</code> and <code>updatedAt</code> timestamp used to resolve conflicts.</li>
+        </ul>
+
+        <h3>2.5 Information we do NOT collect</h3>
+        <ul>
+            <li>Advertising identifiers (IDFA).</li>
+            <li>Third-party tracking pixels or cookies.</li>
+            <li>Microphone or camera input.</li>
+            <li>Contacts, photos, calendar, or reminders.</li>
+            <li>Voice recordings (the "Hey Siri" intent is handled by Apple's Siri service; HeadWell never receives the audio).</li>
+        </ul>
+
+        <h2>3. Why we collect it (purposes)</h2>
+        <p>We process your data for the following purposes only:</p>
+        <ol>
+            <li><strong>Provide the app's core features</strong> — account login, headache logging, risk forecasting, intervention activities, insights and pattern detection, doctor reports.</li>
+            <li><strong>Sync your data across your devices</strong> — so logging on iPhone shows up when you open the app on iPad.</li>
+            <li><strong>Generate personalized predictions</strong> — combine your headache history, sleep, HRV, cycle, and weather into a daily risk score.</li>
+            <li><strong>Diagnose and improve the app</strong> — local-only crash and performance metrics help us fix bugs.</li>
+            <li><strong>Respond to your requests</strong> — when you contact us for support or to exercise a data right.</li>
+        </ol>
+        <p>We do <strong>not</strong> use your data for advertising, profiling for marketing, sale, or any purpose outside the ones above.</p>
+
+        <h2>4. Legal basis (GDPR)</h2>
+        <p>If you are located in the European Economic Area or the United Kingdom, our legal basis for processing your personal data is:</p>
+        <ul>
+            <li><strong>Performance of a contract</strong> (GDPR Art. 6(1)(b)) — for account creation, login, sync, and feature delivery.</li>
+            <li><strong>Your explicit consent</strong> (GDPR Art. 6(1)(a) and Art. 9(2)(a)) — for sensitive health information (Art. 9 special-category data: health data, trauma history). You provide this consent by completing the intake survey, granting HealthKit access, and accepting this Privacy Policy at onboarding.</li>
+            <li><strong>Our legitimate interests</strong> (GDPR Art. 6(1)(f)) — for diagnostic data used to keep the app stable.</li>
+        </ul>
+        <p>You can withdraw consent at any time by deleting your account (see §7).</p>
+
+        <h2>5. Sharing and disclosure</h2>
+        <p>We do <strong>not sell, rent, trade, or share</strong> your personal data with any third party for any purpose other than the operational sub-processors listed below. We do <strong>not</strong> disclose your data to advertisers, data brokers, or marketing analytics providers.</p>
+
+        <h3>5.1 Sub-processors (service providers that process data on our behalf)</h3>
+        <table>
+            <thead>
+                <tr><th>Sub-processor</th><th>Purpose</th><th>Location</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>MongoDB Atlas</td><td>Backend database storage</td><td>United States</td></tr>
+                <tr><td>Railway</td><td>Backend application hosting</td><td>United States</td></tr>
+                <tr><td>Google (Sign in with Google)</td><td>OAuth authentication only</td><td>Global</td></tr>
+                <tr><td>Apple (HealthKit, WeatherKit, Sign in with Apple, MetricKit)</td><td>Platform services</td><td>Global</td></tr>
+            </tbody>
+        </table>
+        <p>We use Standard Contractual Clauses or equivalent safeguards for any international data transfer where required.</p>
+
+        <h3>5.2 Legal disclosure</h3>
+        <p>We may disclose personal data if compelled by valid legal process (subpoena, court order). We will notify affected users unless legally prohibited from doing so.</p>
+
+        <h3>5.3 In the event of a sale or merger</h3>
+        <p>If HeadWell is acquired or merged with another entity, we will provide notice and the option to delete your account before any data transfer occurs.</p>
+
+        <h2>6. How long we keep your data</h2>
+        <ul>
+            <li><strong>Account data</strong>: kept for as long as your account exists.</li>
+            <li><strong>Health entries, surveys, assessments, HealthKit aggregates</strong>: kept for as long as your account exists, so the app's prediction engine has historical context.</li>
+            <li><strong>Diagnostic data</strong>: kept locally on your device only and rotated automatically by iOS.</li>
+            <li><strong>Backend logs</strong>: standard application logs are retained for 30 days, then rotated.</li>
+        </ul>
+        <p>When you delete your account (see §7), all data is permanently removed from our backend within 30 days.</p>
+
+        <h2>7. Your rights</h2>
+        <p>You have the following rights regardless of where you live (GDPR, CCPA/CPRA, and other applicable laws):</p>
+        <ul>
+            <li><strong>Access</strong> — request a copy of the personal data we hold about you. The fastest way: open the app, go to <strong>Profile → Data Export</strong>, and export your full data as CSV or JSON. You can also email us.</li>
+            <li><strong>Deletion</strong> ("right to be forgotten") — delete your account and all associated data from our backend. In the app: <strong>Profile → Account → Delete my account</strong>. This action is irreversible.</li>
+            <li><strong>Correction</strong> — update inaccurate personal data via your profile, or email us if you need help.</li>
+            <li><strong>Portability</strong> — the in-app JSON export provides your data in a machine-readable, portable format.</li>
+            <li><strong>Restriction</strong> — ask us to pause processing pending a request.</li>
+            <li><strong>Objection</strong> — object to processing based on legitimate interests.</li>
+            <li><strong>Withdraw consent</strong> — you can revoke HealthKit access in Settings → Privacy &amp; Security → Health → HeadWell at any time, or delete your account to revoke all consent.</li>
+        </ul>
+
+        <h3>7.1 California residents (CCPA / CPRA)</h3>
+        <p>In addition to the above:</p>
+        <ul>
+            <li><strong>Right to know</strong> — categories of personal information collected, sources, purposes, and recipients (this policy covers all of those).</li>
+            <li><strong>Right to delete</strong> — same as the in-app deletion above.</li>
+            <li><strong>Right to opt out of sale or sharing</strong> — <strong>we do not sell or share personal information for cross-context behavioral advertising.</strong> There is nothing to opt out of, but you have the right to confirm this.</li>
+            <li><strong>Right to non-discrimination</strong> — we will not deny service or change pricing because you exercised a right.</li>
+        </ul>
+        <p>To exercise any right, email <a href="mailto:support@headwell.app">support@headwell.app</a>. We respond within 30 days (45 days under CCPA for complex requests).</p>
+
+        <h2>8. HealthKit-specific commitments</h2>
+        <p>We follow Apple's HealthKit privacy guidelines:</p>
+        <ul>
+            <li>We request the <strong>minimum necessary</strong> Health data types.</li>
+            <li>HealthKit data is <strong>never used for advertising</strong> or shared with any third party.</li>
+            <li>HealthKit data is <strong>never sold</strong>.</li>
+            <li>HealthKit data is <strong>never disclosed</strong> to a third party for any purpose other than the operational sub-processors in §5.1, and only as anonymized daily aggregates.</li>
+            <li>Raw HealthKit samples <strong>never leave your device</strong>.</li>
+            <li>If you revoke HealthKit access in iOS Settings, HeadWell stops reading new samples immediately. Any aggregates already stored in your backend record remain unless you delete your account.</li>
+        </ul>
+
+        <h2>9. Security</h2>
+        <ul>
+            <li>All network traffic uses HTTPS (TLS 1.2 or higher).</li>
+            <li>Authentication tokens are stored in the iOS Keychain.</li>
+            <li>Passwords are hashed with BCrypt server-side. We never see, log, or transmit plaintext passwords.</li>
+            <li>Backend storage (MongoDB Atlas) uses AES-256 encryption at rest by default.</li>
+            <li>We follow the principle of least privilege for backend access.</li>
+        </ul>
+        <p>No internet-connected service is 100% secure. If you become aware of a security issue, please email <a href="mailto:security@headwell.app">security@headwell.app</a> and we will investigate promptly.</p>
+
+        <h2>10. Children</h2>
+        <p>HeadWell is intended for adults <strong>18 years of age or older</strong>. We do not knowingly collect personal data from children under 13 (in the US) or under 16 (in the EU/UK). If you believe a child has provided us personal data, please email us and we will delete it.</p>
+
+        <h2>11. International data transfers</h2>
+        <p>If you are located outside the United States, your data will be transferred to and processed in the United States (where our backend infrastructure is hosted). By using HeadWell, you consent to this transfer. We use industry-standard safeguards (TLS in transit, AES-256 at rest, restricted access controls) and, where required by GDPR, Standard Contractual Clauses with sub-processors.</p>
+
+        <h2>12. Cookies and similar technologies</h2>
+        <p>The HeadWell iOS app does not use cookies. Our marketing website (<a href="https://vishalpuri2594.github.io/headwell-website/">https://vishalpuri2594.github.io/headwell-website/</a>) is a static page hosted on GitHub Pages and does not set any tracking cookies. GitHub Pages may set technically-necessary cookies for content delivery; refer to <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">GitHub's Privacy Statement</a>.</p>
+
+        <h2>13. Changes to this policy</h2>
+        <p>We may update this policy as the app and our practices evolve. Material changes will be:</p>
+        <ul>
+            <li>Posted to this page with an updated <strong>Effective date</strong> and <strong>Last updated</strong> timestamp.</li>
+            <li>Surfaced in the app via a one-time banner asking you to re-acknowledge.</li>
+        </ul>
+        <p>Continued use of HeadWell after the effective date constitutes acceptance of the updated policy.</p>
+
+        <h2>14. Medical disclaimer</h2>
+        <p>HeadWell is a <strong>consumer wellness app for self-tracking and education</strong>. It is not a medical device, does not diagnose, treat, cure, or prevent any disease, and is not a substitute for professional medical advice. If you are experiencing a sudden, severe, or entirely new type of headache, <strong>seek emergency medical attention</strong>.</p>
+
+        <h2>15. Contact</h2>
+        <p>For privacy questions, data-subject access or deletion requests, or to report a concern:</p>
+        <p><strong>Email:</strong> <a href="mailto:support@headwell.app">support@headwell.app</a></p>
+        <p>We will acknowledge receipt within 5 business days and respond substantively within 30 days (45 days in California for complex CCPA requests).</p>
+
+        <hr>
+        <p><small>© 2026 HeadWell. All rights reserved.</small></p>
+    </article>
+
+    <footer class="footer">
+        <a href="support.html">Support</a> ·
+        <a href="privacy.html">Privacy</a> ·
+        <a href="terms.html">Terms</a>
+        <br><br>
+        © 2026 HeadWell. All rights reserved.
+    </footer>
+</body>
+</html>
