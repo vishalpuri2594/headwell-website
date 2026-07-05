@@ -23,9 +23,9 @@
     <article class="content container">
         <h1>HeadWell — Privacy Policy</h1>
         <p><strong>Effective date:</strong> May 17, 2026<br>
-        <strong>Last updated:</strong> May 17, 2026</p>
+        <strong>Last updated:</strong> July 5, 2026</p>
 
-        <p>This Privacy Policy explains what data HeadWell ("we", "us", or "HeadWell") collects when you use the HeadWell iOS app and related services, why we collect it, how we store and protect it, and the rights you have over it. We've written it in plain English. If anything is unclear, please email us.</p>
+        <p>This Privacy Policy explains what data HeadWell ("we", "us", or "HeadWell") collects when you use the HeadWell iOS and Android apps and related services, why we collect it, how we store and protect it, and the rights you have over it. We've written it in plain English. If anything is unclear, please email us.</p>
 
         <blockquote>This policy is not legal advice and is a v1 publication. It will be reviewed by counsel and may be updated. Material changes will be communicated in-app.</blockquote>
 
@@ -68,32 +68,43 @@
         </ul>
         <p><strong>Raw HealthKit samples never leave your device.</strong> Only daily aggregates (a single sleep-hours number, a daily HRV average, etc. — stored as <code>HealthMetricSnapshot</code>) are sent to our backend so your risk forecasts can be computed and synced across your devices.</p>
 
-        <h3>2.3 Location and device sensors</h3>
+        <h3>2.3 Information from Android Health Connect (with your permission)</h3>
+        <p>On Android, HeadWell can read the following Health Connect data types. Access is <strong>read-only</strong> — HeadWell never writes to Health Connect:</p>
         <ul>
-            <li><strong>Location (when in use)</strong>: used at the moment you open the app or refresh your risk forecast to fetch local barometric pressure, temperature, and humidity from Apple WeatherKit. Your location is <strong>not stored</strong> on our backend; only the resulting weather reading is associated with that day's risk score.</li>
-            <li><strong>Device barometer (motion permission)</strong>: used to read your iPhone's built-in atmospheric pressure sensor for hyper-local pressure measurements. No motion or fitness data is collected.</li>
+            <li>Sleep sessions</li>
+            <li>Steps</li>
+            <li>Resting heart rate</li>
+            <li>Heart rate variability (HRV — RMSSD)</li>
+            <li>Exercise sessions</li>
+        </ul>
+        <p><strong>Purpose:</strong> these signals feed your personal headache-risk forecast and insights (for example, short sleep or an HRV drop raises your predicted risk). <strong>Raw Health Connect records never leave your device.</strong> Only daily aggregate values (a single sleep-hours number, a daily HRV average, a daily step count — stored as <code>HealthMetricSnapshot</code>) are sent to our backend so your forecast can be computed and synced across your devices. Health Connect data is never used for advertising, never sold, and never shared with third parties. You can revoke access at any time in the Health Connect app or Android Settings → Apps → HeadWell → Permissions; deleting your account deletes the stored aggregates (see §7).</p>
+
+        <h3>2.4 Location and device sensors</h3>
+        <ul>
+            <li><strong>Location (when in use)</strong>: used at the moment you open the app or refresh your risk forecast to fetch the local barometric-pressure forecast, temperature, and humidity. On iOS the lookup uses Apple WeatherKit; on Android your approximate coordinates are sent to the <a href="https://open-meteo.com/">Open-Meteo</a> weather service solely to perform the lookup. Your location is <strong>not stored</strong> on our backend and is not linked to your account by the weather provider; only the resulting weather reading is associated with that day's risk score.</li>
+            <li><strong>Device barometer</strong>: used to read your phone's built-in atmospheric pressure sensor (iPhone via the motion permission; Android pressure sensor needs no permission) for hyper-local pressure measurements. No motion or fitness data is collected.</li>
         </ul>
 
-        <h3>2.4 Information collected automatically</h3>
+        <h3>2.5 Information collected automatically</h3>
         <ul>
-            <li><strong>Diagnostic data</strong>: HeadWell subscribes to Apple's MetricKit, which delivers (~once per day) anonymized crash, hang, CPU, and disk-write metrics. These are stored locally on your device and are not currently uploaded.</li>
+            <li><strong>Diagnostic data</strong>: on iOS, HeadWell subscribes to Apple's MetricKit, which delivers (~once per day) anonymized crash, hang, CPU, and disk-write metrics; these are stored locally on your device and are not currently uploaded. The Android app contains no crash-reporting or analytics SDKs.</li>
             <li><strong>Sync metadata</strong>: for each record synced to our backend, we keep a <code>remoteId</code> and <code>updatedAt</code> timestamp used to resolve conflicts.</li>
         </ul>
 
-        <h3>2.5 Information we do NOT collect</h3>
+        <h3>2.6 Information we do NOT collect</h3>
         <ul>
             <li>Advertising identifiers (IDFA).</li>
             <li>Third-party tracking pixels or cookies.</li>
             <li>Microphone or camera input.</li>
             <li>Contacts, photos, calendar, or reminders.</li>
-            <li>Voice recordings (the "Hey Siri" intent is handled by Apple's Siri service; HeadWell never receives the audio).</li>
+            <li>Voice recordings (on iOS, the "Hey Siri" intent is handled by Apple's Siri service; HeadWell never receives the audio).</li>
         </ul>
 
         <h2>3. Why we collect it (purposes)</h2>
         <p>We process your data for the following purposes only:</p>
         <ol>
             <li><strong>Provide the app's core features</strong> — account login, headache logging, risk forecasting, intervention activities, insights and pattern detection, doctor reports.</li>
-            <li><strong>Sync your data across your devices</strong> — so logging on iPhone shows up when you open the app on iPad.</li>
+            <li><strong>Sync your data across your devices</strong> — so an entry logged on one device shows up on your others, including between the iOS and Android apps.</li>
             <li><strong>Generate personalized predictions</strong> — combine your headache history, sleep, HRV, cycle, and weather into a daily risk score.</li>
             <li><strong>Diagnose and improve the app</strong> — local-only crash and performance metrics help us fix bugs.</li>
             <li><strong>Respond to your requests</strong> — when you contact us for support or to exercise a data right.</li>
@@ -104,7 +115,7 @@
         <p>If you are located in the European Economic Area or the United Kingdom, our legal basis for processing your personal data is:</p>
         <ul>
             <li><strong>Performance of a contract</strong> (GDPR Art. 6(1)(b)) — for account creation, login, sync, and feature delivery.</li>
-            <li><strong>Your explicit consent</strong> (GDPR Art. 6(1)(a) and Art. 9(2)(a)) — for sensitive health information (Art. 9 special-category data: health data, trauma history). You provide this consent by completing the intake survey, granting HealthKit access, and accepting this Privacy Policy at onboarding.</li>
+            <li><strong>Your explicit consent</strong> (GDPR Art. 6(1)(a) and Art. 9(2)(a)) — for sensitive health information (Art. 9 special-category data: health data, trauma history). You provide this consent by completing the intake survey, granting HealthKit or Health Connect access, and accepting this Privacy Policy at onboarding.</li>
             <li><strong>Our legitimate interests</strong> (GDPR Art. 6(1)(f)) — for diagnostic data used to keep the app stable.</li>
         </ul>
         <p>You can withdraw consent at any time by deleting your account (see §7).</p>
@@ -121,7 +132,9 @@
                 <tr><td>MongoDB Atlas</td><td>Backend database storage</td><td>United States</td></tr>
                 <tr><td>Railway</td><td>Backend application hosting</td><td>United States</td></tr>
                 <tr><td>Google (Sign in with Google)</td><td>OAuth authentication only</td><td>Global</td></tr>
-                <tr><td>Apple (HealthKit, WeatherKit, Sign in with Apple, MetricKit)</td><td>Platform services</td><td>Global</td></tr>
+                <tr><td>Apple (HealthKit, WeatherKit, Sign in with Apple, MetricKit)</td><td>Platform services (iOS)</td><td>Global</td></tr>
+                <tr><td>Google (Health Connect, Play services)</td><td>Platform services (Android)</td><td>Global</td></tr>
+                <tr><td>Open-Meteo</td><td>Weather / barometric-pressure forecast lookup (Android; receives approximate coordinates only, no account identifiers)</td><td>European Union</td></tr>
             </tbody>
         </table>
         <p>We use Standard Contractual Clauses or equivalent safeguards for any international data transfer where required.</p>
@@ -135,8 +148,8 @@
         <h2>6. How long we keep your data</h2>
         <ul>
             <li><strong>Account data</strong>: kept for as long as your account exists.</li>
-            <li><strong>Health entries, surveys, assessments, HealthKit aggregates</strong>: kept for as long as your account exists, so the app's prediction engine has historical context.</li>
-            <li><strong>Diagnostic data</strong>: kept locally on your device only and rotated automatically by iOS.</li>
+            <li><strong>Health entries, surveys, assessments, HealthKit / Health Connect aggregates</strong>: kept for as long as your account exists, so the app's prediction engine has historical context.</li>
+            <li><strong>Diagnostic data</strong>: kept locally on your device only and rotated automatically by the operating system.</li>
             <li><strong>Backend logs</strong>: standard application logs are retained for 30 days, then rotated.</li>
         </ul>
         <p>When you delete your account (see §7), all data is permanently removed from our backend within 30 days.</p>
@@ -145,12 +158,12 @@
         <p>You have the following rights regardless of where you live (GDPR, CCPA/CPRA, and other applicable laws):</p>
         <ul>
             <li><strong>Access</strong> — request a copy of the personal data we hold about you. The fastest way: open the app, go to <strong>Profile → Data Export</strong>, and export your full data as CSV or JSON. You can also email us.</li>
-            <li><strong>Deletion</strong> ("right to be forgotten") — delete your account and all associated data from our backend. In the app: <strong>Profile → Account → Delete my account</strong>. This action is irreversible.</li>
+            <li><strong>Deletion</strong> ("right to be forgotten") — delete your account and all associated data from our backend. In the iOS app: <strong>Profile → Account → Delete my account</strong>. In the Android app: <strong>Profile → App → Delete Account</strong>. You can also <a href="delete-account.html">request deletion on the web</a> without reinstalling the app. This action is irreversible.</li>
             <li><strong>Correction</strong> — update inaccurate personal data via your profile, or email us if you need help.</li>
             <li><strong>Portability</strong> — the in-app JSON export provides your data in a machine-readable, portable format.</li>
             <li><strong>Restriction</strong> — ask us to pause processing pending a request.</li>
             <li><strong>Objection</strong> — object to processing based on legitimate interests.</li>
-            <li><strong>Withdraw consent</strong> — you can revoke HealthKit access in Settings → Privacy &amp; Security → Health → HeadWell at any time, or delete your account to revoke all consent.</li>
+            <li><strong>Withdraw consent</strong> — you can revoke HealthKit access in iOS Settings → Privacy &amp; Security → Health → HeadWell, or Health Connect access in the Health Connect app or Android Settings, at any time, or delete your account to revoke all consent.</li>
         </ul>
 
         <h3>7.1 California residents (CCPA / CPRA)</h3>
@@ -163,8 +176,8 @@
         </ul>
         <p>To exercise any right, email <a href="mailto:headeasesupport@gmail.com">headeasesupport@gmail.com</a>. We respond within 30 days (45 days under CCPA for complex requests).</p>
 
-        <h2>8. HealthKit-specific commitments</h2>
-        <p>We follow Apple's HealthKit privacy guidelines:</p>
+        <h2>8. HealthKit and Health Connect commitments</h2>
+        <p>We follow Apple's HealthKit privacy guidelines and Google's Health Connect permissions policy:</p>
         <ul>
             <li>We request the <strong>minimum necessary</strong> Health data types.</li>
             <li>HealthKit data is <strong>never used for advertising</strong> or shared with any third party.</li>
@@ -172,12 +185,13 @@
             <li>HealthKit data is <strong>never disclosed</strong> to a third party for any purpose other than the operational sub-processors in §5.1, and only as anonymized daily aggregates.</li>
             <li>Raw HealthKit samples <strong>never leave your device</strong>.</li>
             <li>If you revoke HealthKit access in iOS Settings, HeadWell stops reading new samples immediately. Any aggregates already stored in your backend record remain unless you delete your account.</li>
+            <li>Everything above applies equally to Android Health Connect data: minimum-necessary read-only types (sleep, steps, resting heart rate, HRV, exercise), no advertising use, no sale, no third-party disclosure beyond the §5.1 sub-processors, raw records stay on-device, and revoking access in Health Connect stops new reads immediately.</li>
         </ul>
 
         <h2>9. Security</h2>
         <ul>
             <li>All network traffic uses HTTPS (TLS 1.2 or higher).</li>
-            <li>Authentication tokens are stored in the iOS Keychain.</li>
+            <li>Authentication tokens are stored in the iOS Keychain on iOS and in EncryptedSharedPreferences (AES-256-GCM) on Android.</li>
             <li>Passwords are hashed with BCrypt server-side. We never see, log, or transmit plaintext passwords.</li>
             <li>Backend storage (MongoDB Atlas) uses AES-256 encryption at rest by default.</li>
             <li>We follow the principle of least privilege for backend access.</li>
@@ -191,7 +205,7 @@
         <p>If you are located outside the United States, your data will be transferred to and processed in the United States (where our backend infrastructure is hosted). By using HeadWell, you consent to this transfer. We use industry-standard safeguards (TLS in transit, AES-256 at rest, restricted access controls) and, where required by GDPR, Standard Contractual Clauses with sub-processors.</p>
 
         <h2>12. Cookies and similar technologies</h2>
-        <p>The HeadWell iOS app does not use cookies. Our marketing website (<a href="https://vishalpuri2594.github.io/headwell-website/">https://vishalpuri2594.github.io/headwell-website/</a>) is a static page hosted on GitHub Pages and does not set any tracking cookies. GitHub Pages may set technically-necessary cookies for content delivery; refer to <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">GitHub's Privacy Statement</a>.</p>
+        <p>The HeadWell apps do not use cookies. Our marketing website (<a href="https://vishalpuri2594.github.io/headwell-website/">https://vishalpuri2594.github.io/headwell-website/</a>) is a static page hosted on GitHub Pages and does not set any tracking cookies. GitHub Pages may set technically-necessary cookies for content delivery; refer to <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">GitHub's Privacy Statement</a>.</p>
 
         <h2>13. Changes to this policy</h2>
         <p>We may update this policy as the app and our practices evolve. Material changes will be:</p>
