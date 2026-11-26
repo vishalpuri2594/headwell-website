@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vishalpuri2594.github.io/headwell-website/sitemap.xml
